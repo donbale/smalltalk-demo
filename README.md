@@ -1,4 +1,5 @@
 # Smalltalk- the Rasa Demo Bot
+[![Actions Status](https://github.com/donbale/smalltalk-demo/workflows/Continuous%20Integration/badge.svg?branch=master)](https://github.com/donbale/smalltalk-demo/actions)
 
 ## :surfer: Introduction
 The purpose of this repo is to showcase a contextual AI assistant built with the open source Rasa framework. 
