@@ -5,19 +5,20 @@ FROM rasa/rasa-sdk:1.10.0
 WORKDIR /app
 
 # Copy actions requirements
-# COPY actions/requirements-actions.txt ./
+COPY actions/requirements-actions.txt ./
 
 # Change to root user to install dependencies
 USER root
 
 # Install extra requirements for actions code
-# RUN pip install -r requirements-actions.txt
+RUN pip install -r requirements-actions.txt
 
 # Copy actions code to working directory
 COPY ./actions /app/actions
 
 # Install modules from setup.py
 COPY setup.py /app
+RUN /opt/venv/bin/python -m pip install --upgrade pip
 RUN  pip install -e . --no-cache-dir
 
 # Download spacy language data
