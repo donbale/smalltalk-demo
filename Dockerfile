@@ -11,7 +11,7 @@ COPY actions/requirements-actions.txt ./
 USER root
 
 # Install extra requirements for actions code
-RUN pip install -r requirements-actions.txt
+# RUN pip install -r requirements-actions.txt
 
 # Copy actions code to working directory
 COPY ./actions /app/actions
